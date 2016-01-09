@@ -1,0 +1,10 @@
+Package: me.chewitt.fingal
+Name: Fingal
+Depends: mobilesubstrate, firmware (>=8.0), preferenceloader
+Version: 0.0.2
+Architecture: iphoneos-arm
+Description: Animated icon theming platform for iOS 8 & 9
+Maintainer: Charlie Hewitt <contact@chewitt.me>
+Author: Charlie Hewitt <contact@chewitt.me>
+Section: Tweaks
+Icon: file:///Library/PreferenceBundles/FingalPrefs.bundle/icon_big.png
