@@ -48,6 +48,21 @@ static NSArray *activeThemes;
 	}
 }
 
+-(void) setFrame:(CGRect)f {
+	%orig;
+	// resize if frame changes (accounts for seng)
+	if(self.fingalAnimatedIconView != nil) {
+		if(!CGRectEqualToRect(self.fingalAnimatedIconView.frame, self.bounds)) {
+			self.fingalAnimatedIconView.frame = self.bounds;
+			UIImage *_maskingImage = self.contentsImage;
+			CALayer *_maskingLayer = [CALayer layer];
+			_maskingLayer.frame = self.fingalAnimatedIconView.bounds;
+			[_maskingLayer setContents:(id)[_maskingImage CGImage]];
+			[self.fingalAnimatedIconView.layer setMask:_maskingLayer];
+		}
+	}
+}
+
 %end
 
 
