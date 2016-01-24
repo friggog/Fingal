@@ -138,7 +138,7 @@ NSInteger system_nd(const char *command) {
 }
 
 -(NSString*) tableView:(UITableView*)table titleForFooterInSection:(NSInteger)section {
-    return section == 0 ? @"Respring to fully apply changes." : section == 3 ? @"Fingal 0.0.2 © Charlie Hewitt 2016" : @"";
+    return section == 0 ? @"Respring to fully apply changes." : section == 3 ? @"Fingal 1.0.0 © Charlie Hewitt 2016" : @"";
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section
